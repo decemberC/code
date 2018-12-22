@@ -1,11 +1,14 @@
 package romanum;
-class match{
- protected char change(int changer) {
-  char changed;
+import java.util.Scanner;
+public class Romanum {
+ private void change() {
   
-  return;
+ }
+ public static void main(String[] args) {
+  Scanner iner = new Scanner(System.in);
+  try{
+	  
+  }catch(Exception wrongin){
  }
 }
-public class Romanum {
-
 }
