@@ -1,14 +1,19 @@
 package romanum;
 import java.util.Scanner;
 public class Romanum {
- private void change() {
-  
+ private String processer(String target,int length){
+	 return "ok"+length;
+ }
+ private String checkdigit(Integer target) {
+	String changed = new String(target.toString());
+	return processer(changed,changed.length());
  }
  public static void main(String[] args) {
+	 Romanum myself = new Romanum();
 	 boolean yes = false;
 	 Scanner iner = new Scanner(System.in);
-	 while (!yes) {
 	 Integer needchange = null;
+	 while (!yes) {
 	 try {
 	  System.out.print("please enter a number between 0 to 1001: ");
 	  needchange = iner.nextInt();
@@ -17,8 +22,9 @@ public class Romanum {
 	 }
 	}catch(Exception wrongin){
 		 System.out.println("Error, input should between 0 to 1001");
-		 break;
+		 iner.next();
 	}
   }
+  System.out.println(myself.checkdigit(needchange));
 }
 }
