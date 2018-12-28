@@ -1,12 +1,17 @@
 package romanum;
 import java.util.Scanner;
-public class Romanum {
- private String processer(String target,int length){
-	 return "ok"+length;
+public class Romanum { 
+ private String exchange(int starget){
+	 
+ }
+ private String exchange(int starget,int dtarget){
+	 
+ }
+ private String exchange(int starget,int dtarget,int ttarget){
+	 
  }
  private String checkdigit(Integer target) {
-	String changed = new String(target.toString());
-	return processer(changed,changed.length());
+   
  }
  public static void main(String[] args) {
 	 Romanum myself = new Romanum();
