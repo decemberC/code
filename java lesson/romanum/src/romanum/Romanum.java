@@ -2,7 +2,20 @@ package romanum;
 import java.util.Scanner;
 public class Romanum { 
  private String exchange(int starget){
-	 
+	char one,five,ten;
+	String output = new String();
+	one = 'I';
+	five = 'V';
+    ten = 'X';
+	switch (starget){
+	 case 1: output=one;
+	         return output;
+     case 5:output=five;
+	        return output;	 
+	}
+	if (starget<5){
+		if
+	}
  }
  private String exchange(int starget,int dtarget){
 	 
@@ -11,7 +24,15 @@ public class Romanum {
 	 
  }
  private String checkdigit(Integer target) {
-   
+   if (target<10){
+	   exchange(target);
+   }if(target<100){
+	  exchange(target/10,target%10); 
+   }if(target<1000){
+	  enchange(target/100,target%100-target/10,target%100-(target/10)*10);
+   }else{
+	   return 'M';
+   }
  }
  public static void main(String[] args) {
 	 Romanum myself = new Romanum();
