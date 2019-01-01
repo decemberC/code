@@ -8,28 +8,28 @@ public class Romanum {
 	five = 'V';
     ten = 'X';
 	switch (starget){
-	 case 1: output=one;
+	 case 1: output=""+one;
 	         return output;
-     case 5:output=five;
+     case 5:output=""+five;
 	        return output;	 
 	}
 	if (starget<5){
 		if(starget>3){
-			output = one+five;
+			output = ""+one + five;
 			return output;
 		}else{
-			for (int i = 1,i<=starget,i++){
-				output = output + one;
+			for (int i = 1;i<=starget;i++){
+				output = ""+output + one;
 			}
 			return output;
 		}
 	}else{
 		if (starget>8){
-			output = one +ten;
+			output = ""+one +ten;
 			return output;
 		}else{
-			output=five;
-			for (int i = 1,i<=starget%5,i++){
+			output=""+five;
+			for (int i = 1;i<=starget%5;i++){
 				output=output+one;
 			}
 			return output;
@@ -43,28 +43,28 @@ public class Romanum {
 	five = 'L';
     ten = 'C';
 	switch (dtarget){
-	 case 1: output=one;
+	 case 1: output=""+one;
 	         return output+exchange(starget);
-     case 5:output=five;
+     case 5:output=""+five;
 	        return output+exchange(starget);	 
 	}
 	if (dtarget<5){
 		if(dtarget>3){
-			output = one+five;
+			output = ""+one+five;
 			return output+exchange(starget);
 		}else{
-			for (int i = 1,i<=dtarget,i++){
+			for (int i = 1;i<=dtarget;i++){
 				output = output + one;
 			}
 			return output+exchange(starget);
 		}
 	}else{
 		if (dtarget>8){
-			output = one +ten;
+			output =""+ one +ten;
 			return output+exchange(starget);
 		}else{
-			output=five;
-			for (int i = 1,i<=dtarget%5,i++){
+			output=""+five;
+			for (int i = 1;i<=dtarget%5;i++){
 				output=output+one;
 			}
 			return output+exchange(starget);
@@ -78,28 +78,28 @@ public class Romanum {
 	five = 'D';
     ten = 'M';
 	switch (ttarget){
-	 case 1: output=one;
+	 case 1: output=""+one;
 	         return output+exchange(dtarget,starget);
-     case 5:output=five;
+     case 5:output=""+five;
 	        return output+exchange(dtarget,starget);	 
 	}
 	if (ttarget<5){
 		if(ttarget>3){
-			output = one+five;
+			output =""+one+five;
 			return output+exchange(dtarget,starget);
 		}else{
-			for (int i = 1,i<=ttarget,i++){
+			for (int i = 1;i<=ttarget;i++){
 				output = output + one;
 			}
 			return output+exchange(dtarget,starget);
 		}
 	}else{
 		if (ttarget>8){
-			output = one +ten;
+			output =""+one +ten;
 			return output+exchange(dtarget,starget);
 		}else{
-			output=five;
-			for (int i = 1,i<=ttarget%5,i++){
+			output=""+five;
+			for (int i = 1;i<=ttarget%5;i++){
 				output=output+one;
 			}
 			return output+exchange(dtarget,starget);
@@ -108,13 +108,13 @@ public class Romanum {
  }
  private String checkdigit(Integer target) {
    if (target<10){
-	   exchange(target);
+	   return exchange(target);
    }if(target<100){
-	  exchange(target/10,target%10); 
+	  return exchange(target/10,target%10); 
    }if(target<1000){
-	  enchange(target/100,target%100-target/10,target%100-(target/10)*10);
+	  return exchange(target/100,target%100-target/10,target%100-(target/10)*10);
    }else{
-	   return 'M';
+	   return ""+'M';
    }
  }
  public static void main(String[] args) {
