@@ -11,7 +11,8 @@ public class Romanum {
 	 case 1: output=""+one;
 	         return output;
      case 5:output=""+five;
-	        return output;	 
+	        return output;
+     case 0: return "";			
 	}
 	if (starget<5){
 		if(starget>3){
@@ -42,32 +43,33 @@ public class Romanum {
 	one = 'X';
 	five = 'L';
     ten = 'C';
-	switch (dtarget){
+	switch (starget){
 	 case 1: output=""+one;
-	         return output+exchange(starget);
+	         return output+exchange(dtarget);
      case 5:output=""+five;
-	        return output+exchange(starget);	 
+	        return output+exchange(dtarget);	 
+	 case 0: return "";
 	}
-	if (dtarget<5){
-		if(dtarget>3){
+	if (starget<5){
+		if(starget>3){
 			output = ""+one+five;
-			return output+exchange(starget);
+			return output+exchange(dtarget);
 		}else{
 			for (int i = 1;i<=dtarget;i++){
 				output = output + one;
 			}
-			return output+exchange(starget);
+			return output+exchange(dtarget);
 		}
 	}else{
-		if (dtarget>8){
+		if (starget>8){
 			output =""+ one +ten;
-			return output+exchange(starget);
+			return output+exchange(dtarget);
 		}else{
 			output=""+five;
-			for (int i = 1;i<=dtarget%5;i++){
+			for (int i = 1;i<=starget%5;i++){
 				output=output+one;
 			}
-			return output+exchange(starget);
+			return output+exchange(dtarget);
 		}
 	} 
  }
@@ -77,32 +79,33 @@ public class Romanum {
 	one = 'C';
 	five = 'D';
     ten = 'M';
-	switch (ttarget){
+	switch (starget){
 	 case 1: output=""+one;
-	         return output+exchange(dtarget,starget);
+	         return output+exchange(dtarget,ttarget);
      case 5:output=""+five;
-	        return output+exchange(dtarget,starget);	 
+	        return output+exchange(dtarget,ttarget);	 
+	 case 0: return "";
 	}
-	if (ttarget<5){
-		if(ttarget>3){
+	if (starget<5){
+		if(starget>3){
 			output =""+one+five;
-			return output+exchange(dtarget,starget);
+			return output+exchange(dtarget,ttarget);
 		}else{
-			for (int i = 1;i<=ttarget;i++){
+			for (int i = 1;i<=starget;i++){
 				output = output + one;
 			}
-			return output+exchange(dtarget,starget);
+			return output+exchange(dtarget,ttarget);
 		}
 	}else{
-		if (ttarget>8){
+		if (starget>8){
 			output =""+one +ten;
-			return output+exchange(dtarget,starget);
+			return output+exchange(dtarget,ttarget);
 		}else{
 			output=""+five;
-			for (int i = 1;i<=ttarget%5;i++){
+			for (int i = 1;i<=starget%5;i++){
 				output=output+one;
 			}
-			return output+exchange(dtarget,starget);
+			return output+exchange(dtarget,ttarget);
 		}
 	}  
  }
