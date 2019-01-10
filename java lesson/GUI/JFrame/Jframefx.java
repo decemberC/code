@@ -7,11 +7,11 @@ public class Jframefx extends Application{
 	public void start(Stage stage){
 		Stage namedstage = new Stage();
 		Scene screen = new Scene(new FlowPane(),640,300);
-		Scene namedscene = new Scene(new FlowPane(),640,300);
+		Scene namedscene = new Scene(new FlowPane(),1920,1080);
 		namedstage.setTitle("Hello world!");
 		namedstage.setScene(namedscene);
-		namedstage.show();
 		namedstage.setFullScreen(false);
+		namedstage.show();
 		stage.setScene(screen);
 		stage.show();
 	}
