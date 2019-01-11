@@ -132,7 +132,7 @@ public class Romanum {
       if(needchange >0 && needchange<1000) {
 		yes =true; 
 	 }
-	}catch(Exception wrongin){
+	}catch(IOException wrongin){
 		 System.out.println("Error, input should between 0 to 1001");
 		 iner.next();
 	}
