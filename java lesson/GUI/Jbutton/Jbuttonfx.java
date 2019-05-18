@@ -2,7 +2,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.acene.control.Button;
-improt javafx.scene.layout.*;
+import javafx.scene.layout.*;
 import java.awt.*;
 
 public class Jbuttonfx extends Application{
