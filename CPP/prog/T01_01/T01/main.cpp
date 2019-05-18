@@ -1,0 +1,11 @@
+// The First C++ Program - main.cpp
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    cout << "Hello World!\n";
+
+    system("pause");
+}
