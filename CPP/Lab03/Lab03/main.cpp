@@ -10,7 +10,8 @@
 // *** Task-A ***
 
 #define WINDOW_CLASS_NAME "wc1"
-
+int distantce = 0;
+PAINTSTRUCT wps;
 
 //  This is the main message handler of the system
 LRESULT CALLBACK WndProc( HWND hWnd, 
@@ -24,44 +25,11 @@ LRESULT CALLBACK WndProc( HWND hWnd,
     // what is the message 
     switch (msg) {
         case WM_CREATE :
+
             return(0);
             break;
         case WM_PAINT : {
             hDC = BeginPaint(hWnd,&ps);     // simply validate the window
-
-// *** Task-B ***
-			HPEN hPenOld;
-			HPEN hLinePen;
-			COLORREF qLineColor;
-			qLineColor = RGB(255, 0, 0);
-			hLinePen = CreatePen(PS_SOLID,4, qLineColor);
-			hPenOld = (HPEN)SelectObject(hDC,hLinePen);
-
-			MoveToEx(hDC, 100, 150, NULL);
-			LineTo(hDC,55, 250);
-			MoveToEx(hDC, 55, 250, NULL);
-			LineTo(hDC, 160, 250);
-			MoveToEx(hDC, 160, 250, NULL);
-			LineTo(hDC, 100, 150);
-			qLineColor = RGB(0, 255, 0);
-			
-			SelectObject(hDC, hPenOld);
-			DeleteObject(hLinePen);
-			hLinePen = CreatePen(PS_SOLID, 4, qLineColor);
-			hPenOld = (HPEN)SelectObject(hDC, hLinePen);
-			MoveToEx(hDC, 80, 250, NULL);
-			LineTo(hDC, 80, 300);
-			MoveToEx(hDC, 135, 250, NULL);
-			LineTo(hDC, 135, 300);
-			HPEN hEllipsePen;
-			COLORREF qEllipseColor;
-			qEllipseColor = RGB(0, 0, 255);
-			hEllipsePen = CreatePen(PS_SOLID, 3, qEllipseColor);
-			hPenOld = (HPEN)SelectObject(hDC, hEllipsePen);
-			Arc(hDC, 50, 50,150, 150, 0, 0, 0, 0);
-			SelectObject(hDC, hPenOld);
-			DeleteObject(hEllipsePen);
-// *** Task-B ***
 
             EndPaint(hWnd,&ps);
             return(0);
@@ -149,12 +117,47 @@ int WINAPI WinMain( HINSTANCE hInstance,
 
 // *** Task-A **
 		HDC hDC = GetDC(hWnd);
+		GetWindowRect(hWnd, &wps.rcPaint);
 		SetTextColor(hDC, RGB(0,0,0));
 		SetBkColor(hDC, RGB(0, 0, 0));
 		SetBkMode(hDC,TRANSPARENT);
 		TextOut(hDC,300 ,120 , "Hello!Chong Wang Ho", strlen("Hello!Chong Wang Ho"));
-		Sleep(16.7);
-		ReleaseDC(hWnd, hDC);
+		
+		
+		HPEN hPenOld;
+		HPEN hLinePen;
+		COLORREF qLineColor;
+		qLineColor = RGB(255, 0, 0);
+		hLinePen = CreatePen(PS_SOLID, 4, qLineColor);
+		hPenOld = (HPEN)SelectObject(hDC, hLinePen);
+
+		MoveToEx(hDC, 100+distantce, 150, NULL);
+		LineTo(hDC, 55 + distantce, 250);
+		MoveToEx(hDC, 55 + distantce, 250, NULL);
+		LineTo(hDC, 160 + distantce, 250);
+		MoveToEx(hDC, 160 + distantce, 250, NULL);
+		LineTo(hDC, 100 + distantce, 150);
+		qLineColor = RGB(0, 255, 0);
+
+		SelectObject(hDC, hPenOld);
+		DeleteObject(hLinePen);
+		hLinePen = CreatePen(PS_SOLID, 4, qLineColor);
+		hPenOld = (HPEN)SelectObject(hDC, hLinePen);
+		MoveToEx(hDC, 80 + distantce, 250, NULL);
+		LineTo(hDC, 80 + distantce, 300);
+		MoveToEx(hDC, 135 + distantce, 250, NULL);
+		LineTo(hDC, 135 + distantce, 300);
+		HPEN hEllipsePen;
+		COLORREF qEllipseColor;
+		qEllipseColor = RGB(0, 0, 255);
+		hEllipsePen = CreatePen(PS_SOLID, 3, qEllipseColor);
+		hPenOld = (HPEN)SelectObject(hDC, hEllipsePen);
+		Arc(hDC, 50 + distantce, 50, 150 + distantce, 150, 0, 0, 0, 0);
+		SelectObject(hDC, hPenOld);
+		DeleteObject(hEllipsePen);	
+		Sleep(15);
+		FillRect(hDC, &wps.rcPaint, CreateSolidBrush(RGB(255, 255, 255)));
+		distantce += 2;
 // *** Task-A ***
 
     } // end while
