@@ -1,1 +1,1 @@
-*.exe,*.iobj,*.ipdb,*.pdb,*.vcxproj,*.vcxproj.filters,*.vcxproj.user,*.cpp,.vs filter=lfs diff=lfs merge=lfs -text
+*.exe,*.iobj,*.ipdb,*.pdb,*.vcxproj,*.vcxproj.filters,*.vcxproj.user,*.cpp,.vs,*.bmp,*.jpg filter=lfs diff=lfs merge=lfs -text
