@@ -1,2 +1,3 @@
-#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.17134.0
-Release|Win32|D:\ST201819\ACPPGP\LN\Topic01\prog\T01_10\|
+version https://git-lfs.github.com/spec/v1
+oid sha256:1af621540994fff1f6f7e4e69f6aa7b5a184871c13dcadb508fb2e40fa7b4961
+size 219

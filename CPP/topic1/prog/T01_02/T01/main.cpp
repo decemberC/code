@@ -1,26 +1,3 @@
-// The Second C++ Program - main.cpp
-
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    int chi, eng;
-    float math, ave;
-
-    cout << "Hello World!\n";
-
-    cout << "\n Please enter your math score: "; //read the mark from user
-    cin >> math;
-
-    cout << "\n Please enter your chi score: "; //read the mark from user
-    cin >> chi;
-
-    cout << "\n Please enter your eng score: ";
-    cin >> eng;   
-
-    ave = (math + chi + eng)/3;
-    cout << "\n Your average marks: " << ave << endl;
-
-    system("pause");
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23902e8d0216a88f3e8e278a96187e1e3ece4521602d1eda2b354b9182bcb52d
+size 553

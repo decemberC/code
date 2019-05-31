@@ -1,20 +1,3 @@
-// The 12th C++ program - main.cpp
-
-#include "adder.h"
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    Adder a1, a2;
-
-    a1.seta(2);
-    a1.setb(5);
-    a2.seta(1);
-    a2.setb(5);
-
-    cout << a1.addNumber() << endl;
-    cout << a2.addNumber() << endl;
-
-    system("pause");
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bb1863432674dd7eb2300009e207b2bca97be64ac3ba69a7038efb11d60cc1a
+size 311

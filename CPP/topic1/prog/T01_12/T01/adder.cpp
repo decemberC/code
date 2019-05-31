@@ -1,14 +1,3 @@
-// The 12th C++ program - adder.cpp
-#include "adder.h"
-
-int Adder::addNumber() {
-    return(a+b);
-}
-
-void Adder::seta(int a1) {
-    a = a1;
-}
-
-void Adder::setb(int b1) {
-    b = b1;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d4f6f5ebe793ddd5dee6a9b1992271f40a01fcd28e9748342916e62afbf918f
+size 198

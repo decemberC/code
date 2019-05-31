@@ -1,6 +1,3 @@
-
-#include <windows.h>
-int WINAPI WinMain(HINSTANCE hinstance,HINSTANCE hPrevInstance,LPSTR szCmdLine,int iCmdShow) {
-	MessageBox(NULL, "I am Chong Wang Ho.", "Windows Graphics Programming I", MB_OK | MB_ICONEXCLAMATION);
-	return(0);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f023aa3c777ef32b9b326628db33923638e5fc4d03c8887e8d179c4cbbe7b3f
+size 239

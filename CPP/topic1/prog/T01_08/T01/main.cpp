@@ -1,23 +1,3 @@
-// The 8th C++ program - mian.cpp
-
-#include <iostream>
-
-using namespace std;
-
-int addNumbers(int a, int b) {
-    return(a+b);
-}
-
-int main() {
-    int a, b;
-
-    cout << "Enter a number: ";
-    cin >> a;
-
-    cout << "Enter an other number: ";
-    cin >> b;
-
-    cout << "Sum of the two numbers is: " << addNumbers(a, b) << "\n";
-
-    system("pause");
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:08b2de394c8607ec5bed225af5e99ef78784e37f73deef2810d2cbef7db5787e
+size 374

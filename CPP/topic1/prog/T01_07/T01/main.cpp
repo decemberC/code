@@ -1,23 +1,3 @@
-// The 7th C++ program - main.cpp
-
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    int myArray[10][10];
-
-    for (int i=0; i<=9; i++) {
-        for (int t=0; t<=9; t++) {
-            myArray[i][t] = i*10+t;     //This will give each element a value
-        }
-    }
-
-    for (int i=0; i<=9; i++) {
-        for (int t=0; t<=9; t++) {
-            cout << myArray[i][t] << endl;
-        }
-    }
-
-    system("pause");
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:84caa205492dfa545fe451a974b911acd9de91007288fb633bae17364e340a3e
+size 450

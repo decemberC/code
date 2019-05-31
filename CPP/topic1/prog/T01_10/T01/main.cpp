@@ -1,20 +1,3 @@
-// The 10th C++ program - main.cpp
-
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    int *address;
-    int value = 200;
-    address = &value;
-
-    cout<< "*address = "<< *address << endl;
-    cout<< "address = "<< address << endl;
-    value++;
-
-    cout<< "*address = "<< *address << endl;
-    cout<< "address = "<< address << endl;
-
-    system("pause");
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf672ff90a56fb9d99616a9c468ec20079c768b21f44dc59a9e8d645323cd219
+size 388

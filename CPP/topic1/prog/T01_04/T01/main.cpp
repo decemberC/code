@@ -1,25 +1,3 @@
-// The 4th C++ program - main.cpp
-
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    int a, b;
-
-    cout << "Enter a value for a: ";
-    cin >> a;
-    cout << "Enter a value for b: ";
-    cin >> b;
-
-    if (a > b) {
-        cout << a << " is greater than " << b;
-    } else if (a < b) {
-        cout << a << " is less than " << b;
-    } else {
-        cout << a << " is equal to " << b;
-    }
-    cout << endl;
-
-    system("pause");
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a34fdffbb2dcdf39a0c0df5c0896833233fc86b37cb45ceecaddf0dcae02feeb
+size 470
